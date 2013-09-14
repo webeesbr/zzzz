@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+
+		<!-- Always force latest IE rendering engine (even in intranet) & Chrome Frame
+		Remove this if you use the .htaccess -->
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+
+		<title>Contato Webees</title>
+		<meta name="description" content="" />
+		<meta name="author" content="Webees">
+
+		<meta name="viewport" content="width=device-width; initial-scale=1.0" />
+
+		<!-- Replace favicon.ico & apple-touch-icon.png in the root of your domain and delete these references -->
+		<link rel="shortcut icon" href="/favicon.ico" />
+		<link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+	</head>
+
+	<body style="text-align: left">
+
+		<form method="post" action="../controller/mail.php" name="Inputform">
+
+			<input type="hidden" name="email" value="contato.webees@gmail.com">
+
+			<table border="1" width="50%">
+
+				<tr>
+					<td width="48%" align="right">Nome</td>
+					<td width="52%">
+					<input type="text" name="nome" size="20">
+					</td>
+				</tr>
+				
+				<tr>
+					<td width="48%" align="right">E-mail:</td>
+					<td width="52%">
+					<input type="text" name="email" size="20">
+					</td>
+				</tr>
+
+
+				<tr>
+					<td width="48%" align="right">Assunto</td><td width="52%">
+					<input type="text" name="assunto" size="20">
+					</td>
+				</tr>
+
+				<tr>
+					<td width="48%" align="right">Mensagem</td><td width="52%">
+					<textarea rows="4" name="mensagem" cols="26"></textarea></td>
+				</tr>
+
+				<tr>
+					<td width="100%" align="center" colspan="2">
+					<input type="submit" value="Enviar">
+					<input type="reset"  value="Cancelar">
+					</td>
+				</tr>
+
+			</table>
+
+		</form>
+
+	</body>
+</html>
