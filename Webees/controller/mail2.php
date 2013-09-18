@@ -1,4 +1,4 @@
-﻿ 
+ 
 <?php
  
 /*
@@ -44,7 +44,7 @@ $mail->SMTPAuth   = "true";
 $mail->Username   = "contato.webees";
  
 // Define a senha deste usuário citado acima
-$mail->Password   = "senha";
+$mail->Password   = "ludi280709";
  
 // Defina o email e o nome que aparecerá como remetente no cabeçalho
 $mail->From       = "contato.webees@gmail.com";

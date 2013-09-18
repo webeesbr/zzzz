@@ -1,22 +1,30 @@
 <?php
 require ("../includes/PHPMailer/class.phpmailer.php");
+require ("../comum/constantes.php");
 
 
 $mail = new PHPMailer();
  
 // Charset para evitar erros de caracteres
 $mail->Charset = 'UTF-8';
- 
+
 // Dados de quem está enviando o email
 $mail->From = 'contato.webees@gmail.com';
 $mail->FromName = 'Nome de quem enviou';
  
-// Setando o conteudo
-$mail->IsHTML(true);
-$mail->Subject = 'Assunto do e-mail';
-$mail->Body     = '&lt;h1&gt;Teste de envio de e-mail&lt;/h1&gt; &lt;p&gt;Isso é um teste&lt;/p&gt;';
-$mail->AltBody = 'Conteudo sem HTML para editores que não suportam, sim, existem alguns';
+
+ $msg_webees = sprintf(email_webees, $_POST["nome"], $_POST["email"], $_POST["assunto"], $_POST["mensagem"]);
  
+ // Setando o conteudo
+$mail->IsHTML(true);
+$mail->Subject = $_POST["assunto"];
+$mail->Body = $msg_webees;
+//$mail->Subject = 'Assunto do e-mail';
+//$mail->Body     = '&lt;h1&gt;Teste de envio de e-mail&lt;/h1&gt; &lt;p&gt;Isso é um teste&lt;/p&gt;';
+//$mail->AltBody = 'Conteudo sem HTML para editores que não suportam, sim, existem alguns';
+
+
+
 // Validando a autenticação
 $mail->IsSMTP();
 $mail->SMTPAuth = true;
